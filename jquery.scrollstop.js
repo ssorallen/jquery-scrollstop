@@ -11,14 +11,14 @@
                   _args = arguments;
 
               if (timer) {
-                  clearTimeout(timer);
+                clearTimeout(timer);
               } else {
-                  evt.type = 'scrollstart';
-                  $.event.handle.apply(_self, _args);
+                evt.type = 'scrollstart';
+                $.event.handle.apply(_self, _args);
               }
 
               timer = setTimeout(function() {
-                  timer = null;
+                timer = null;
               }, special.scrollstop.latency);
           };
 
@@ -38,20 +38,20 @@
                   _args = arguments;
 
               if (timer) {
-                  clearTimeout(timer);
+                clearTimeout(timer);
               }
 
               timer = setTimeout(function() {
-                  timer = null;
-                  evt.type = 'scrollstop';
-                  $.event.handle.apply(_self, _args);
+                timer = null;
+                evt.type = 'scrollstop';
+                $.event.handle.apply(_self, _args);
               }, special.scrollstop.latency);
             };
 
         $(this).bind('scroll', handler).data(uid2, handler);
       },
       teardown: function() {
-          $(this).unbind('scroll', $(this).data(uid2));
+        $(this).unbind('scroll', $(this).data(uid2));
       }
     };
 
