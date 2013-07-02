@@ -14,7 +14,7 @@
                 clearTimeout(timer);
               } else {
                 evt.type = 'scrollstart';
-                $.event.handle.apply(_self, _args);
+                $.event.dispatch.apply(_self, _args);
               }
 
               timer = setTimeout(function() {
@@ -44,7 +44,7 @@
               timer = setTimeout(function() {
                 timer = null;
                 evt.type = 'scrollstop';
-                $.event.handle.apply(_self, _args);
+                $.event.dispatch.apply(_self, _args);
               }, special.scrollstop.latency);
             };
 
