@@ -1,4 +1,12 @@
 (function($) {
+  // $.event.dispatch was undocumented and was deprecated in jQuery 1.7[1]. It
+  // was replaced by $.event.handle in jQuery 1.9.
+  //
+  // Use the first of the available functions to support jQuery <1.8.
+  //
+  // [1] https://github.com/jquery/jquery-migrate/blob/master/src/event.js#L25
+  var dispatch = $.event.dispatch || $.event.handle;
+
   var special = $.event.special,
       uid1 = 'D' + (+new Date()),
       uid2 = 'D' + (+new Date() + 1);
@@ -14,7 +22,7 @@
               clearTimeout(timer);
             } else {
               evt.type = 'scrollstart';
-              $.event.dispatch.apply(_self, _args);
+              dispatch.apply(_self, _args);
             }
 
             timer = setTimeout(function() {
@@ -44,7 +52,7 @@
             timer = setTimeout(function() {
               timer = null;
               evt.type = 'scrollstop';
-              $.event.dispatch.apply(_self, _args);
+              dispatch.apply(_self, _args);
             }, special.scrollstop.latency);
           };
 
