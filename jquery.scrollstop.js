@@ -1,3 +1,7 @@
+/*!
+ * jQuery Scrollstop Plugin v1.1.0
+ * https://github.com/ssorallen/jquery-scrollstop
+ */
 (function($) {
   // $.event.dispatch was undocumented and was deprecated in jQuery 1.7[1]. It
   // was replaced by $.event.handle in jQuery 1.9.
