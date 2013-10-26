@@ -1,0 +1,19 @@
+{
+  "name": "scrollstop",
+  "version": "1.0.0",
+
+  "author": {
+    "name": "James Padolsey",
+    "url": "http://james.padolsey.com/javascript/special-scroll-events-for-jquery/"
+  },
+  "dependencies": {
+    "jquery": ">=1.2.3"
+  },
+  "description": "jQuery plugin that adds custom scroll start and scroll stop events.",
+  "homepage": "https://github.com/ssorallen/jquery-scrollstop",
+  "maintainer": {
+    "name": "Ross Allen",
+    "url": "https://github.com/ssorallen/"
+  },
+  "title": "jQuery Scrollstop"
+}
