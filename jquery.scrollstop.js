@@ -1,5 +1,5 @@
 /*!
- * jQuery Scrollstop Plugin v1.1.0
+ * jQuery Scrollstop Plugin v1.0.1
  * https://github.com/ssorallen/jquery-scrollstop
  */
 (function($) {
