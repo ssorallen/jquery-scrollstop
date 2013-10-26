@@ -7,19 +7,19 @@
     setup: function() {
       var timer,
           handler = function(evt) {
-              var _self = this,
-                  _args = arguments;
+            var _self = this,
+                _args = arguments;
 
-              if (timer) {
-                clearTimeout(timer);
-              } else {
-                evt.type = 'scrollstart';
-                $.event.dispatch.apply(_self, _args);
-              }
+            if (timer) {
+              clearTimeout(timer);
+            } else {
+              evt.type = 'scrollstart';
+              $.event.dispatch.apply(_self, _args);
+            }
 
-              timer = setTimeout(function() {
-                timer = null;
-              }, special.scrollstop.latency);
+            timer = setTimeout(function() {
+              timer = null;
+            }, special.scrollstop.latency);
           };
 
         $(this).bind('scroll', handler).data(uid1, handler);
@@ -29,30 +29,30 @@
       }
     };
 
-    special.scrollstop = {
-      latency: 250,
-      setup: function() {
-        var timer,
-            handler = function(evt) {
-              var _self = this,
-                  _args = arguments;
+  special.scrollstop = {
+    latency: 250,
+    setup: function() {
+      var timer,
+          handler = function(evt) {
+            var _self = this,
+                _args = arguments;
 
-              if (timer) {
-                clearTimeout(timer);
-              }
+            if (timer) {
+              clearTimeout(timer);
+            }
 
-              timer = setTimeout(function() {
-                timer = null;
-                evt.type = 'scrollstop';
-                $.event.dispatch.apply(_self, _args);
-              }, special.scrollstop.latency);
-            };
+            timer = setTimeout(function() {
+              timer = null;
+              evt.type = 'scrollstop';
+              $.event.dispatch.apply(_self, _args);
+            }, special.scrollstop.latency);
+          };
 
-        $(this).bind('scroll', handler).data(uid2, handler);
-      },
-      teardown: function() {
-        $(this).unbind('scroll', $(this).data(uid2));
-      }
-    };
+      $(this).bind('scroll', handler).data(uid2, handler);
+    },
+    teardown: function() {
+      $(this).unbind('scroll', $(this).data(uid2));
+    }
+  };
 
 })(jQuery);
