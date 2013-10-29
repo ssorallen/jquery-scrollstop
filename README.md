@@ -1,10 +1,10 @@
 jquery-scrollstop
 =================
 
-## Usage
-
 The plugin fires two events on `window` when scrolling starts and stops:
 `scrollstart` and `scrollstop`.
+
+## Usage
 
 `scrollstart` fires after the first scroll event and won't fire again until
 after a `scrollstop` event is fired.
