@@ -1,8 +1,13 @@
 jquery-scrollstop
 =================
 
-The plugin fires two events on `window` when scrolling starts and stops:
+This plugin fires two events on `window` when scrolling starts and stops:
 `scrollstart` and `scrollstop`.
+
+## Example
+
+The example shows a small box in the upper left that says "SCROLLING" and
+colors the body different colors when scrolling: http://ssorallen.com/jquery-scrollstop/
 
 ## Usage
 
