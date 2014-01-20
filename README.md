@@ -36,9 +36,10 @@ $(window)
 `scrollstop` event fires. Set `$.event.special.scrollstop.latency` to the
 desired number of milliseconds (default: 250).
 
-    // Configure time between final scroll event and `scrollstop` event to
-    // 650ms (default is 250ms).
-    $.event.special.scrollstop.latency = 650;
+```js
+// Configure time between final scroll event and `scrollstop` event to 650ms (default is 250ms).
+$.event.special.scrollstop.latency = 650;
+```
 
 ### jQuery Version Support
 
