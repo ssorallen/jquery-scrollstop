@@ -28,6 +28,18 @@ $(window)
   })
 ```
 
+### Configuration
+
+#### latency
+
+`latency` is the minimum time between the last scroll event and when the
+`scrollstop` event fires. Set `$.event.special.scrollstop.latency` to the
+desired number of milliseconds (default: 250).
+
+    // Configure time between final scroll event and `scrollstop` event to
+    // 650ms (default is 250ms).
+    $.event.special.scrollstop.latency = 650;
+
 ### jQuery Version Support
 
 The plugin is tested in jQuery 1.2.3+ and jQuery 2.0.3+.
