@@ -37,7 +37,8 @@ $(window)
 desired number of milliseconds (default: 250).
 
 ```js
-// Configure time between final scroll event and `scrollstop` event to 650ms (default is 250ms).
+// Configure time between final scroll event and
+// `scrollstop` event to 650ms (default is 250ms).
 $.event.special.scrollstop.latency = 650;
 ```
 
