@@ -34,12 +34,12 @@
             }, special.scrollstop.latency);
           };
 
-        $(this).bind('scroll', handler).data(uid1, handler);
-      },
-      teardown: function() {
-        $(this).unbind('scroll', $(this).data(uid1));
-      }
-    };
+      $(this).bind('scroll', handler).data(uid1, handler);
+    },
+    teardown: function() {
+      $(this).unbind('scroll', $(this).data(uid1));
+    }
+  };
 
   special.scrollstop = {
     latency: 250,
