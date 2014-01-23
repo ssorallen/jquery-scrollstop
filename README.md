@@ -42,6 +42,15 @@ desired number of milliseconds (default: 250).
 $.event.special.scrollstop.latency = 650;
 ```
 
+Latency can be configured per-element by passing options when the event listener
+is bound. If multiple event listeners are bound to the same element, only the
+data from the first event listener will set the configuration.
+
+```js
+// Configure latency to 650ms for #scrolling-div
+$("#scrolling-div").on("scrollstop", {latency: 650}, function() { ... });
+```
+
 ### jQuery Version Support
 
 The plugin is tested in jQuery 1.2.3+ and jQuery 2.0.3+.

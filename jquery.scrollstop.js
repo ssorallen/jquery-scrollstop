@@ -1,5 +1,5 @@
 /*!
- * jQuery Scrollstop Plugin v1.0.1
+ * jQuery Scrollstop Plugin v1.1.0
  * https://github.com/ssorallen/jquery-scrollstop
  */
 (function($) {
@@ -16,7 +16,11 @@
       uid2 = 'D' + (+new Date() + 1);
 
   special.scrollstart = {
-    setup: function() {
+    setup: function(data) {
+      var _data = $.extend({
+        latency: special.scrollstop.latency
+      }, data);
+
       var timer,
           handler = function(evt) {
             var _self = this,
@@ -31,7 +35,7 @@
 
             timer = setTimeout(function() {
               timer = null;
-            }, special.scrollstop.latency);
+            }, _data.latency);
           };
 
       $(this).bind('scroll', handler).data(uid1, handler);
@@ -43,7 +47,11 @@
 
   special.scrollstop = {
     latency: 250,
-    setup: function() {
+    setup: function(data) {
+      var _data = $.extend({
+        latency: special.scrollstop.latency
+      }, data);
+
       var timer,
           handler = function(evt) {
             var _self = this,
@@ -57,7 +65,7 @@
               timer = null;
               evt.type = 'scrollstop';
               dispatch.apply(_self, _args);
-            }, special.scrollstop.latency);
+            }, _data.latency);
           };
 
       $(this).bind('scroll', handler).data(uid2, handler);
