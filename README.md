@@ -42,6 +42,8 @@ desired number of milliseconds (default: 250).
 $.event.special.scrollstop.latency = 650;
 ```
 
+##### latency per element
+
 Latency can be configured per-element by passing options when the event listener
 is bound. If multiple event listeners are bound to the same element, only the
 data from the first event listener will set the configuration.
