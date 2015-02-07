@@ -7,7 +7,8 @@ This plugin fires two events on `window` when scrolling starts and stops:
 ## Example
 
 The example shows a small box in the upper left that says "SCROLLING" and
-colors the body different colors when scrolling: http://ssorallen.com/jquery-scrollstop/
+colors the body different colors when scrolling:
+[http://ssorallen.com/jquery-scrollstop/](http://ssorallen.com/jquery-scrollstop/)
 
 ## Usage
 
@@ -59,8 +60,5 @@ The plugin is tested in jQuery 1.2.3+ and jQuery 2.0.3+.
 
 ### Attribution
 
-James Padolsey's jQuery scrollstop plugin that fires an event when scrolling
-stops for minimum amount of time.
-
-Originally code copied from
-http://james.padolsey.com/javascript/special-scroll-events-for-jquery/
+Originally code taken from James Padolsey's blog:
+[http://james.padolsey.com/javascript/special-scroll-events-for-jquery/](http://james.padolsey.com/javascript/special-scroll-events-for-jquery/)
