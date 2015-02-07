@@ -1,8 +1,22 @@
-/*!
- * jQuery Scrollstop Plugin v1.1.0
- * https://github.com/ssorallen/jquery-scrollstop
- */
-(function($) {
+// jQuery Scrollstop Plugin v1.1.0
+// https://github.com/ssorallen/jquery-scrollstop
+
+(function (factory) {
+  // UMD[2] wrapper for jQuery plugins to work in AMD or in CommonJS.
+  //
+  // [2] https://github.com/umdjs/umd
+
+  if (typeof define === 'function' && define.amd) {
+    // AMD. Register as an anonymous module.
+    define(['jquery'], factory);
+  } else if (typeof exports === 'object') {
+    // Node/CommonJS
+    module.exports = factory(require('jquery'));
+  } else {
+    // Browser globals
+    factory(jQuery);
+  }
+}(function ($) {
   // $.event.dispatch was undocumented and was deprecated in jQuery 1.7[1]. It
   // was replaced by $.event.handle in jQuery 1.9.
   //
@@ -74,5 +88,4 @@
       $(this).unbind('scroll', $(this).data(uid2));
     }
   };
-
-})(jQuery);
+}));
