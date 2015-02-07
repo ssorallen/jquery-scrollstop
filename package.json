@@ -4,6 +4,7 @@
   "description": "A jQuery plugin that adds custom scroll start and scroll stop events.",
   "main": "jquery.scrollstop.js",
   "scripts": {
+    "build": "uglifyjs --compres -o jquery.scrollstop.min.js -- jquery.scrollstop.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -31,5 +32,8 @@
   "bugs": {
     "url": "https://github.com/ssorallen/jquery-scrollstop/issues"
   },
-  "homepage": "https://github.com/ssorallen/jquery-scrollstop"
+  "homepage": "https://github.com/ssorallen/jquery-scrollstop",
+  "devDependencies": {
+    "uglify-js": "^2.4.16"
+  }
 }
