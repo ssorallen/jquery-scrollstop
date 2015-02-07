@@ -1,8 +1,8 @@
 {
   "name": "jquery-scrollstop",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "A jQuery plugin that adds custom scroll start and scroll stop events.",
-  "main": "jquery.scrollstop.js",
+  "main": "jquery.scrollstop.min.js",
   "scripts": {
     "build": "uglifyjs --compres -o jquery.scrollstop.min.js -- jquery.scrollstop.js",
     "test": "echo \"Error: no test specified\" && exit 1"
