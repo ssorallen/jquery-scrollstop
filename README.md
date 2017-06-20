@@ -8,7 +8,7 @@ This plugin fires two events on `window` when scrolling starts and stops:
 
 The example shows a small box in the upper left that says "SCROLLING" and
 colors the body different colors when scrolling:
-[http://ssorallen.com/jquery-scrollstop/](http://ssorallen.com/jquery-scrollstop/)
+[https://ssorallen.github.io/jquery-scrollstop/](https://ssorallen.github.io/jquery-scrollstop/)
 
 ## Usage
 
