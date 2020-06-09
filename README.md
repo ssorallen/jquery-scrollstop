@@ -4,6 +4,14 @@ jquery-scrollstop
 This plugin fires two events on `window` when scrolling starts and stops:
 `scrollstart` and `scrollstop`.
 
+## Installation
+
+This library is released on NPM as [jquery-scrollstop][0]:
+
+```
+npm install jquery-scrollstop
+```
+
 ## Example
 
 The example shows a small box in the upper left that says "SCROLLING" and
@@ -62,3 +70,5 @@ The plugin is tested in jQuery 1.2.3+ and jQuery 2.0.3+.
 
 Originally code taken from James Padolsey's blog:
 [http://james.padolsey.com/javascript/special-scroll-events-for-jquery/](http://james.padolsey.com/javascript/special-scroll-events-for-jquery/)
+
+[0]: https://www.npmjs.com/package/jquery-scrollstop
